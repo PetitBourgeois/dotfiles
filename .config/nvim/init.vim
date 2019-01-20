@@ -1,10 +1,19 @@
 set nocompatible
 
-let mapleader =" "
+call plug#begin()
+
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
+Plug 'mattn/emmet-vim'
+
+call plug#end()
+
+let mapleader =","
 nmap <leader>w :w!<cr>
 
-"set background=dark
-color dracula
+syntax on
+syntax enable
 
 map <leader>ls :ls<CR>
 map <leader>bf :bnext<CR>
@@ -47,18 +56,10 @@ set smartindent
 set autoindent
 set copyindent
 
-syntax on
-syntax enable
 set showmode
 set number relativenumber
 
-call plug#begin()
-
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/nerdtree'
-Plug 'mattn/emmet-vim'
-
-call plug#end()
-
 map <C-n> :NERDTreeToggle<CR>
+
+"set background=dark
+color dracula

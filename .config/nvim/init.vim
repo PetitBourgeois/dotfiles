@@ -18,7 +18,7 @@ syntax enable
 map <leader>ls :ls<CR>
 map <leader>bf :bnext<CR>
 map <leader>bb :bprevious<CR>
-map <leader>q :q!<CR>
+map <leader>q :q<CR>
 
 map <C-j> <C-W>j
 map <C-k> <C-W>k

@@ -10,3 +10,4 @@ PS1='[\u@\h \W]\$ '
 
 alias ll='ls -la'
 alias n='nvim'
+alias p='sudo pacman'

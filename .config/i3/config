@@ -11,6 +11,11 @@ font pango:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+#gaps
+for_window [class="^.*"] border pixel 2
+gaps inner 7
+gaps outer 0
+
 floating_modifier $mod
 
 #start programs
@@ -160,5 +165,5 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness

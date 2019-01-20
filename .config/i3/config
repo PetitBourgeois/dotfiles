@@ -167,3 +167,8 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+
+#Touchpad settings
+xinput set-prop 14 300 1
+xinput set-prop 14 282 1
+xinput set-prop 14 291 -0.25

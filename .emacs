@@ -8,7 +8,7 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (setq-default indent-tabs-mode nil)
-(global-linum-mode)
+(global-display-line-numbers-mode)
 (setq inhibit-startup-message t)
 (setq initial-scratch-message "")
 (set-face-attribute 'default nil :height 110)

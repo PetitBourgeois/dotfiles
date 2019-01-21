@@ -13,8 +13,8 @@ font pango:monospace 8
 
 #gaps
 for_window [class="^.*"] border pixel 2
-gaps inner 7
-gaps outer 0
+gaps inner 10
+gaps outer 5
 
 floating_modifier $mod
 
@@ -168,7 +168,6 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
-#Touchpad settings
-xinput set-prop 14 300 1
-xinput set-prop 14 282 1
-xinput set-prop 14 291 -0.25
+#Keyboard layout
+exec_always setxkbmap -layout us,ru
+exec_always setxkbmap -option 'grp:toggle'

@@ -53,5 +53,5 @@ min_width=CPU: 100.00%
 # Date Time
 #
 [time]
-command=date '+%d-%m-%Y %H:%M:%S'
+command=date '+%A %d-%m-%Y %H:%M:%S'
 interval=5

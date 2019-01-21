@@ -6,7 +6,8 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
+PS1="\e[40:1;36m[\u \W]\$ \e[m"
 
 alias ll='ls -la'
 alias n='nvim'

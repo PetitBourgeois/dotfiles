@@ -15,6 +15,10 @@ nmap <leader>w :w!<cr>
 syntax on
 syntax enable
 
+tnoremap <leader>l <C-\><C-n>
+
+"move tabs with gt & gT
+
 map <leader>ls :ls<CR>
 map <leader>bf :bnext<CR>
 map <leader>bb :bprevious<CR>

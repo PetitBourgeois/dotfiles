@@ -8,3 +8,4 @@ exec startx
 export EDITOR="nvim"
 export TERMINAL="urxvt"
 export BROWSER="chromium"
+export FILE="ranger"

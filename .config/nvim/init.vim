@@ -69,4 +69,4 @@ set number relativenumber
 map <C-n> :NERDTreeToggle<CR>
 
 "set background=dark
-color dracula
+"color dracula

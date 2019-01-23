@@ -170,7 +170,7 @@ bar {
         colors {
                 background $bg
                 statusline $white
-                separator $pink
+                separator $purp
                 focused_workspace  $purp $purp $bg
                 active_workspace   $white $white $white
                 inactive_workspace $bg $bg $white

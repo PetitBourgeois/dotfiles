@@ -2,7 +2,6 @@ set nocompatible
 
 call plug#begin()
 
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'mattn/emmet-vim'
@@ -30,7 +29,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 "emmet
-map <leader>e <C-y>,
+imap <M-j> <C-y>,
 
 set ignorecase
 set smartcase
@@ -48,11 +47,11 @@ set nobackup
 set noswapfile
 
 set list
-set expandtab
 set scrolloff=4
+set expandtab
 set tabstop=8
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 
 "set smarttab
 "set tabstop=2
@@ -67,6 +66,3 @@ set showmode
 set number relativenumber
 
 map <C-n> :NERDTreeToggle<CR>
-
-"set background=dark
-"color dracula

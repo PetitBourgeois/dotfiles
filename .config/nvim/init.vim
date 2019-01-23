@@ -8,25 +8,25 @@ Plug 'mattn/emmet-vim'
 
 call plug#end()
 
-let mapleader =","
-nmap <leader>w :w!<cr>
-
 syntax on
 syntax enable
 
-tnoremap <leader>l <C-\><C-n>
-
 "move tabs with gt & gT
 
-map <leader>ls :ls<CR>
-map <leader>bf :bnext<CR>
-map <leader>bb :bprevious<CR>
-map <leader>q :q<CR>
+let mapleader =","
 
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+tnoremap <leader>c <C-\><C-n>
+
+nmap <leader>w :w!<cr>
+nmap <leader>q :q<CR>
+nmap <leader>ls :ls<CR>
+nmap <leader>bf :bnext<CR>
+nmap <leader>bb :bprevious<CR>
+
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-h> <C-W>h
+nmap <C-l> <C-W>l
 
 "emmet
 imap <M-j> <C-y>,

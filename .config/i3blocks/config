@@ -35,14 +35,12 @@ interval=10
 
 [memory]
 label=MEM
-separator=false
 interval=30
 
 [cpu_usage]
 label=CPU
 interval=10
 min_width=CPU: 100.00%
-#separator=false
 
 
 #[battery]

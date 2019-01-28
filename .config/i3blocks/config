@@ -35,6 +35,7 @@ interval=10
 
 [memory]
 label=MEM
+separator=true
 interval=30
 
 [cpu_usage]

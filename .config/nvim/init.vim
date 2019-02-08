@@ -31,6 +31,14 @@ nmap <C-l> <C-W>l
 "emmet
 imap <M-j> <C-y>,
 
+"emacs
+imap <C-b> <Left>
+imap <C-f> <Right>
+imap <C-h> <BS>
+imap <C-d> <Del>
+imap <C-e> <End>
+imap <C-a> <Home>
+
 set ignorecase
 set smartcase
 set incsearch

@@ -46,5 +46,8 @@ URxvt.font: xft:Noto Mono:size=9
 URxvt.scrollBar: false
 URxvt.scrollWithBuffer: true
 
-URxvt.perl-ext: 
-URxvt.perl-ext-common: 
+URxvt.perl-ext:
+URxvt.perl-ext-common:
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false

@@ -194,3 +194,4 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 #Keyboard layout
 exec_always setxkbmap -layout us,ru
 exec_always setxkbmap -option 'grp:toggle'
+exec_always dunst

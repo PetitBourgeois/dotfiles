@@ -2,6 +2,12 @@ set nocompatible
 
 call plug#begin()
 
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'morhetz/gruvbox'
+Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'mattn/emmet-vim'
@@ -11,11 +17,12 @@ call plug#end()
 syntax on
 syntax enable
 
+colorscheme gruvbox
+
 let mapleader =","
 
 tnoremap <leader>c <C-\><C-n>
 
-nmap <leader>w :w!<cr>
 nmap <leader>q :q<CR>
 nmap <leader>ls :ls<CR>
 nmap <leader>bf :bnext<CR>
@@ -56,8 +63,10 @@ set list
 set scrolloff=4
 set expandtab
 set tabstop=8
-set softtabstop=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
+
+autocmd FileType html setlocal sts=2 sw=2
 
 "set smarttab
 "set tabstop=2
@@ -72,3 +81,4 @@ set showmode
 set number relativenumber
 
 map <C-n> :NERDTreeToggle<CR>
+map <Leader> <Plug>(easymotion-prefix)

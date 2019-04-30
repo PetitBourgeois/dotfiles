@@ -11,7 +11,8 @@
 (global-display-line-numbers-mode)
 (setq inhibit-startup-message t)
 (setq initial-scratch-message "")
-(set-face-attribute 'default nil :height 110)
+;;(set-face-attribute 'default nil :height 100)
+;;(set-face-attribute 'default t :font 10 )
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 (toggle-frame-fullscreen)
@@ -30,6 +31,8 @@
 (use-package dracula-theme
   :ensure t
   :init (load-theme 'dracula t))
+
+(load-theme 'gruvbox t)
 
 (use-package smartparens
   :ensure t
@@ -105,11 +108,20 @@
          ("C-c C-<" . mc/mark-all-like-this)))
 
 (use-package company
-  :disabled t
+  :ensure t
   :init (global-company-mode t)
   (setq company-idle-delay 0))
+
+(use-package lsp-mode
+  :commands lsp
+  :init (add-hook 'c++-mode-hook #'lsp))
+
+(require 'cquery)
+(setq cquery-executable "~/programming/gits/cquery/build/release/bin/cquery")
+
 (use-package company-lsp
-  :disabled t
+  :ensure t
+  :commands company-lsp
   :init (add-to-list 'company-backends 'company-lsp))
 
 (use-package projectile
@@ -163,41 +175,6 @@
          (css-mode)
          (web-mode)))
 
-;;Javascript
-;; (require 'lsp-javascript-typescript)
-;; (add-hook 'js-mode-hook #'lsp-javascript-typescript-enable)
-;;(add-hook 'typescript-mode-hook #'lsp-javascript-typescript-enable) ;; for typescript support
-;;(add-hook 'js3-mode-hook #'lsp-javascript-typescript-enable) ;; for js3-mode support
-;;(add-hook 'rjsx-mode #'lsp-javascript-typescript-enable) ;; for rjsx-mode support
-
-;;Tern
-;;(require 'company)
-;;(require 'company-tern)
-;;(global-company-mode)
-;;(add-to-list 'company-backends 'company-tern)
-;;(add-hook 'js2-mode-hook (lambda () (tern-mode t) (company-mode)))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;C++;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (setq c-default-style "linux"
-;;       c-basic-offset 2)
-
-
-;;c++ language server
-;; (require 'cquery)
-;; (setq company-transformers nil company-lsp-async t company-lsp-cache-candidates nil)
-;; (setq cquery-executable "~/programming/cquery/bin/cquery")
-
-;; (add-hook 'c++-mode-hook 'lsp-cquery-enable)
-;; (add-hook 'c-mode-hook 'lsp-cquery-enable)
-
-;; (defun cquery//enable ()
-;;   (condition-case nil
-;;       (lsp-cquery-enable)
-;;     (user-error nil)))
-;;   (use-package cquery
-;;     :commands lsp-cquery-enable
-;;     :init (add-hook 'c-mode-hook #'cquery//enable)
-;;           (add-hook 'c++-mode-hook #'cquery//enable))
 
 
 ;;format
@@ -206,5 +183,22 @@
 ;; (global-set-key (kbd "C-c u") 'clang-format-buffer)
 ;; (setq clang-format-style-option "llvm")
 
-
 ;; (define-key c++-mode-map (kbd "C-c c") 'compile)
+
+
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (company company-lsp cquery lsp-mode which-key web-mode web-beautify use-package smartparens rainbow-delimiters projectile nyan-mode neotree multiple-cursors magit json-mode js2-mode gruvbox-theme flycheck evil emmet-mode dracula-theme counsel))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

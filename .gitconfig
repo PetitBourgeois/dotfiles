@@ -5,16 +5,35 @@
 
 [alias]
         st = status
+        #-s for short -b for branch
         sts = status -sb
+        #stage all
         aa = add -A
         cm = commit -m
+        #commit already tracked files
         cma = commit -am
-        co = checkout
-        cob = checkout -b
+        #create branch
         br = branch
-        bd = branch -d
+        #delete branch
+        brd = branch -d
+        #switch branch
+        co = checkout
+        #create and switch
+        cob = checkout -b
         mrg = merge
         mrga = merge --abort
         lp = log --pretty
+        #to unstage file
+        res = reset HEAD
+        #reset HEAD pointer
         res = reset --hard HEAD
         rev = revert -m 1 HEAD
+
+#rm to remove
+#mv to rename
+#clone to clone
+#remote add <name> <url>
+#fetch to fetch all recent changes
+#push <remote_name> <branch>
+#diff to show not staged changes
+#checkout -- <file> to undo changes

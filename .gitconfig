@@ -23,8 +23,6 @@
         mrg = merge
         mrga = merge --abort
         lp = log --pretty
-        #to unstage file
-        res = reset HEAD
         #reset HEAD pointer
         res = reset --hard HEAD
         rev = revert -m 1 HEAD
